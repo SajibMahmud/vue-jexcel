@@ -1,0 +1,92 @@
+{
+  "name": "vue-jexcel",
+  "version": "0.0.1",
+  "description": "Vue.js wrapper for Jexcel CE for creating interactive spreadsheets.",
+  "main": "dist/vue-jexcel.ssr.js",
+  "module": "dist/vue-jexcel.esm.js",
+  "unpkg": "dist/vue-jexcel.min.js",
+  "style": "dist/vue-jexcel.css",
+  "license": "MIT",
+  "author": "Monjur Al Mahmud Mir",
+  "contributors": [
+    {
+      "name": "Monjur Al Mahmud Mir",
+      "web": "https://github.com/SajibMahmud"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SajibMahmud/vue-jexcel"
+  },
+  "keywords": [
+    "Jexcel",
+    "Vue",
+    "Spreadsheet",
+    "Wrapper",
+    "Excel"
+  ],
+  "files": [
+    "dist/*",
+    "src/**/*.vue"
+  ],
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-jexcel.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-jexcel.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-jexcel.min.js",
+    "docs": "run-s docs:*",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "dev": "vuepress dev docs --open",
+    "test": "jest src/*",
+    "watch:test": "npm test -- --watch",
+    "lint": "eslint 'src/**/*.{js,vue}'"
+  },
+  "peerDependencies": {
+    "jexcel": "^4.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@shopify/jest-dom-mocks": "^2.8.11",
+    "@vue/test-utils": "^1.0.0-beta.33",
+    "@vuedoc/md": "^1.6.0",
+    "@vuepress/plugin-register-components": "^1.4.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^25.3.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-vue": "^2.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "jest": "^25.3.0",
+    "jexcel": "^4.5.2",
+    "node-fetch": "^2.6.0",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.6.1",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-css-only": "^2.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-vue": "^5.1.6",
+    "vue": "^2.6.11",
+    "vue-jest": "^3.0.5",
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.4.1",
+    "vuepress-plugin-demo-code": "^0.5.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    }
+  }
+}
