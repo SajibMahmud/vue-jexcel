@@ -26,7 +26,7 @@ Vue.use(VueJexcel);
 ```html
 <!-- Include after Vue -->
 <!-- Local files -->
-<script src="vue-jexcel/dist/vue-jexcel.js"></script>
+<script src="vue-jexcel/dist/vue-jexcel.min.js"></script>
 
 <!-- From CDN -->
 <script src="https://unpkg.com/vue-jexcel"></script>
